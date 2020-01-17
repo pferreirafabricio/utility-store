@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+        <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="united/css/united.min.css" class="uib-framework-theme">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+    </head>
+
+    <body>
+        <div class="upage" id="mainpage">
+            <div class="upage-outer">
+                <div class="uib-header header-bg container-group inner-element uib_w_1" data-uib="layout/header" data-ver="0">
+                    <h2 style="color: black;">ANBRERIKS</h2>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right">
+
+                    </div>
+                </div>
+                <div class="upage-content ac0 content-area vertical-col" id="page_20_69">
+                    <div class="tarea widget uib_w_72 d-margins" data-uib="media/text" data-ver="0" name="uib_w_72">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container text-center">
+                            <h2><strong>LOGIN</strong></h2>
+                        </div>
+                    </div>
+
+                    <div class="table-thing widget uib_w_2 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtUsuarioLogin">Usuário:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Digite seu usuário" id="txtUsuarioLogin" name="txtUsuarioLogin">
+                    </div>
+                    <div class="table-thing widget uib_w_4 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtSenhaLogin">Senha:</label>
+                        <input class="wide-control form-control default" type="password" placeholder="Digite sua senha" id="txtSenhaLogin" name="txtSenhaLogin">
+                    </div>
+
+                    <button class="btn widget uib_w_5 d-margins btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnEntrar"><i class="glyphicon glyphicon-ok-circle button-icon-left" data-position="left"></i>Entrar</button>
+
+                    <button class="btn widget uib_w_29 d-margins btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnQueroCadastrar"><i class="glyphicon glyphicon-user button-icon-left" data-position="left"></i>Quero me cadastrar</button>
+                </div>
+
+                <div id="frmcadastro" class="upage-content hidden vertical-col">
+                    <div class="tarea widget uib_w_19 d-margins" data-uib="media/text" data-ver="0" name="uib_w_19">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container text-center lead pt-4">
+                            <h3><strong>CADASTRO DE USUÁRIO</strong></h3>
+                        </div>
+                    </div>
+
+                    <div class="table-thing widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtCPF">CPF:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Digite seu CPF" id="txtCPF" name="txtCPF">
+                    </div>
+                    <div class="table-thing widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtNome">Nome:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Digite seu nome" name="txtNome" id="txtNome">
+                    </div>
+                    <div class="table-thing widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtDtNasc">Data de Nascimento:</label>
+                        <input class="wide-control form-control default" type="date" placeholder="Placeholder" name="txtDtNasc" id="txtDtNasc">
+                    </div>
+                    <div class="table-thing widget uib_w_17 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtUsuarioCad">Nome de usuário:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Digite o nome de usuário desejado" name="txtUsuarioCad" id="txtUsuarioCad">
+                    </div>
+                    <div class="table-thing widget uib_w_18 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtSenhaCad">Senha:</label>
+                        <input class="wide-control form-control default" type="password" placeholder="Digite sua senha" name="txtSenhaCad" id="txtSenhaCad">
+                    </div>
+                    <fieldset class="widget uib_w_12 d-margins" data-uib="twitter%20bootstrap/radio_group" data-ver="1" data-child-name="rdbTipoUsuario">
+                        <label class="narrow-control label-top-left">Escolha seu tipo de usuário:</label>
+                        <label class="radio radio-padding-left widget uib_w_13" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
+                            <input type="radio" name="rdbTipoUsuario" id="rdbCliente">Cliente</label>
+                        <label class="radio radio-padding-left widget uib_w_15" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
+                            <input type="radio" name="rdbTipoUsuario" id="rdbFuncionario">Funcionário</label>
+                    </fieldset>
+
+                    <div class="btn-group uib-bs-flex widget uib_w_25 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                        <button class="btn widget uib_w_24 d-margins btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastrar"><i class="glyphicon glyphicon-ok button-icon-left" data-position="left"></i>Cadastrar</button>
+                        <button class="btn widget uib_w_26 btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnLimpar"><i class="glyphicon glyphicon-trash button-icon-left" data-position="left"></i>Limpar</button>
+                        <button class="btn widget uib_w_28 btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnVoltarTelaCad"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Voltar</button>
+                    </div>
+                </div>
+
+                <div id="frmHome" class="upage-content hidden vertical-col">
+
+                    <form class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_4 col-0_2-12_2-7_2-2" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_82 d-margins text-center" data-uib="media/img" data-ver="0">
+                                    <figure class="">
+                                        <img src="images/Checkmark.png" width="40px" height="40px">
+
+                                        <figcaption data-position="bottom"></figcaption>
+                                    </figure>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_5 col-0_5-12_5-7_5-5" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col left">
+                                <div class="tarea widget uib_w_83 d-margins" data-uib="media/text" data-ver="0" name="uib_w_83">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><span class="marker"><strong>A sua loja de ferramentas!</strong></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_6 col-0_2-12_2-5_2-5" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="btn widget uib_w_91 d-margins btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCarrinhoCompra"><i class="glyphicon glyphicon-shopping-cart" data-position="icon only"></i>
+                                </button>
+                                <div class="tarea widget uib_w_92 d-margins" data-uib="media/text" data-ver="0" name="uib_w_92" id="txtNumeroProdutosCar">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container text-center">
+                                        <p><strong>0</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_8 col-0_3-12_3-5_3-5" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="btn widget uib_w_77 d-margins btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAtivarSide"><i class="glyphicon glyphicon-list" data-position="icon only"></i>
+                                </button><span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </form>
+
+                    <div class="card_col widget uib_w_70 d-margins card-columns-70" data-uib="layout/card_columns" data-ver="0"></div>
+                    <div class="widget uib_w_71 widget-container content-area vertical-col uib-card cpad-0 d-margins" data-uib="layout/card" data-ver="0"></div>
+
+                    <div class="grid grid-pad urow uib_row_7 row-height-7" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_2 col-0_10-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="table-thing widget uib_w_80 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                                    <label class="narrow-control"></label>
+                                    <input class="wide-control form-control default" type="search" placeholder="Pesquise o produto desejado">
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_3 col-0_2-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="btn widget uib_w_81 d-margins btn-success" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-search" data-position="icon only"></i>
+                                </button>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </div>
+                    <div class="grid grid-pad urow uib_row_9 row-height-9" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_7 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_90 d-margins" data-uib="media/text" data-ver="0" name="uib_w_90">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container text-center">
+                                        <h3><strong>NOSSOS PRODUTOS</strong></h3>
+                                    </div>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+
+                    <div id="todosProdutos">
+
+                    </div>
+
+                </div>
+
+                <div class="inner-element uib_w_30 uib_sidebar rightbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/right_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'right', 'dur':350}" id="sdbMenu">
+                    <div class="sidebar-content content-area vertical-col">
+
+                        <div class="list-group widget uib_w_73 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1"><a class="list-group-item allow-badge widget uib_w_74" data-uib="twitter%20bootstrap/list_item" data-ver="1" id="lvVoltarSide"><span class="badge glyphicon glyphicon-chevron-left"> </span>
+                            
+                            <h4 class="list-group-item-heading">Voltar</h4>
+   
+                            </a><a class="list-group-item allow-badge widget uib_w_75" data-uib="twitter%20bootstrap/list_item" data-ver="1" id="lvLogoutSide"><span class="badge glyphicon glyphicon-off"> </span>
+                            <h4 class="list-group-item-heading">Logout</h4>
+   
+                            </a><a class="list-group-item allow-badge widget uib_w_76" data-uib="twitter%20bootstrap/list_item" data-ver="1" id="lvAdminSide"><span class="badge glyphicon glyphicon-user"> </span>
+                            
+                                 <h4 class="list-group-item-heading">Admin</h4>
+   
+                            </a>
+                        </div>
+                        <button class="btn widget uib_w_78 d-margins btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnFecharSide"><i class="glyphicon glyphicon-remove button-icon-left" data-position="left"></i>Fechar</button>
+
+                    </div>
+                </div>
+
+                <div id="frmProduto" class="upage-content vertical-col left hidden">
+
+                    <form class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_4 col-0_3-12_3-3" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_82 d-margins text-center" data-uib="media/img" data-ver="0">
+                                    <figure class="">
+                                        <img src="images/Checkmark.png" width="40px" height="40px">
+
+                                        <figcaption data-position="bottom"></figcaption>
+                                    </figure>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_5 col-0_7-12_7-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col left">
+                                <div class="tarea widget uib_w_83 d-margins" data-uib="media/text" data-ver="0" name="uib_w_83">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><span class="marker"><strong>A sua loja de ferramentas!</strong></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_6 col-0_2-12_2-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="btn widget uib_w_77 d-margins btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAtivarSide"><i class="glyphicon glyphicon-list" data-position="icon only"></i>
+                                </button><span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </form>
+
+                    <div class="tarea widget uib_w_36 d-margins" data-uib="media/text" data-ver="0" name="uib_w_36">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container text-center">
+                            <h2><strong>PRODUTO</strong></h2>
+                        </div>
+                    </div>
+
+                    <div class="table-thing widget uib_w_41 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtCodigoProd">Código:</label>
+                        <input class="wide-control form-control default" type="number" placeholder="Digite o código do produto" name="txtCodigoProd" id="txtCodigoProd">
+                    </div>
+                    <div class="table-thing widget uib_w_42 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtNomeProd">Nome:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Digite o nome do produto" name="txtNomeProd" id="txtNomeProd">
+                    </div>
+                    <div class="table-thing widget uib_w_43 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtValorProd">Valor:</label>
+                        <input class="wide-control form-control default" type="number" placeholder="Digite o valor do produto" name="txtValorProd" id="txtValorProd">
+                    </div>
+                    <div class="table-thing widget uib_w_44 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtQuantidadeProd">Quantidade:</label>
+                        <input class="wide-control form-control default" type="number" placeholder="Digite a quantidade de produto" name="txtQuantidadeProd" id="txtQuantidadeProd">
+                    </div>
+                    <div class="table-thing widget uib_w_108 d-margins" data-uib="twitter%20bootstrap/select" data-ver="1">
+                        <label class="narrow-control label-top-left">Fornecedor do Produto:</label>
+                        <select class="wide-control form-control default" name="txtFornecedorProduto" id="txtFornecedorProduto">
+                            <option>Selecione o fornecedor...</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-group uib-bs-flex widget uib_w_45 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                        <button class="btn widget uib_w_46 btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnIncluirProd"><i class="glyphicon glyphicon-download-alt button-icon-left" data-position="left"></i>Incluir</button>
+                        <button class="btn widget uib_w_79 d-margins btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnLimparProd"><i class="glyphicon glyphicon-trash button-icon-left" data-position="left"></i>Limpar</button>
+                        <button class="btn widget uib_w_48 btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnExcluirProd"><i class="glyphicon glyphicon-arrow-down button-icon-left" data-position="left"></i>Excluir</button>
+                    </div>
+                </div>
+
+                <div id="frmAdm" class="upage-content vertical-col left hidden">
+
+                    <form class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_4 col-0_3-12_3-3" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_82 d-margins text-center" data-uib="media/img" data-ver="0">
+                                    <figure class="">
+                                        <img src="images/Checkmark.png" width="40px" height="40px">
+
+                                        <figcaption data-position="bottom"></figcaption>
+                                    </figure>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_5 col-0_6-12_6-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col left">
+                                <div class="tarea widget uib_w_83 d-margins" data-uib="media/text" data-ver="0" name="uib_w_83">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><span class="marker"><strong>A sua loja de ferramentas!</strong></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_6 col-0_3-12_3-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="btn widget uib_w_77 d-margins btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAtivarSide"><i class="glyphicon glyphicon-list" data-position="icon only"></i>
+                                </button><span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </form>
+
+                    <div class="list-group widget uib_w_49 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1"><a class="list-group-item allow-badge widget uib_w_50" data-uib="twitter%20bootstrap/list_item" data-ver="1" id="lvProdutosAdmin"><span class="badge glyphicon glyphicon-plane"> </span>
+                           <h4 class="list-group-item-heading">Produtos</h4>
+
+                        <p class="list-group-item-text">Cadastro e exclusão de produtos</p></a><a class="list-group-item allow-badge widget uib_w_51" data-uib="twitter%20bootstrap/list_item" data-ver="1" id="lvPedidosAdmin"><span class="badge glyphicon glyphicon-shopping-cart"> </span>
+                           <h4 class="list-group-item-heading">Pedidos</h4>
+                           <p class="list-group-item-text">Controle de pedidos</p>
+                        </a><a class="list-group-item allow-badge widget uib_w_52" data-uib="twitter%20bootstrap/list_item" data-ver="1" id="lvCaixaAdmin"><span class="badge glyphicon glyphicon-usd"> </span>
+                           <h4 class="list-group-item-heading">Caixa</h4>
+                           <p class="list-group-item-text">Controle de caixa</p>
+                        </a><a class="list-group-item allow-badge widget uib_w_107 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" id="lvFornecedoresAdmin"><span class="badge glyphicon glyphicon-random"> </span>
+   <h4 class="list-group-item-heading">Fornecedores</h4>
+   <p class="list-group-item-text">Cadastro e exclusão de fornecedores</p>
+</a>
+                    </div>
+                </div>
+                <div id="frmPedido" class="upage-content vertical-col left hidden">
+
+                    <form class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_4 col-0_3-12_3-3" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_82 d-margins text-center" data-uib="media/img" data-ver="0">
+                                    <figure class="">
+                                        <img src="images/Checkmark.png" width="40px" height="40px">
+
+                                        <figcaption data-position="bottom"></figcaption>
+                                    </figure>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_5 col-0_6-12_6-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col left">
+                                <div class="tarea widget uib_w_83 d-margins" data-uib="media/text" data-ver="0" name="uib_w_83">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><span class="marker"><strong>A sua loja de ferramentas!</strong></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_6 col-0_3-12_3-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="btn widget uib_w_77 d-margins btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAtivarSide"><i class="glyphicon glyphicon-list" data-position="icon only"></i>
+                                </button><span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </form>
+
+                    <div class="tarea widget uib_w_53 d-margins" data-uib="media/text" data-ver="0" name="uib_w_53">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container text-center">
+                            <h2><strong>PEDIDO</strong></h2>
+                        </div>
+                    </div>
+                    <div class="table-thing widget uib_w_54 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtCodigoPedido">Código:</label>
+                        <input class="wide-control form-control default" type="number" placeholder="Digite o código do pedido" name="txtCodigoPedido" id="txtCodigoPedido">
+                    </div>
+                    <div class="table-thing widget uib_w_55 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtUsuarioPedido">Nome usuário:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Digite o código do usuário" id="txtUsuarioPedido" name="txtUsuarioPedido" disabled="">
+                    </div>
+                    <div class="table-thing widget uib_w_56 d-margins" data-uib="twitter%20bootstrap/select" data-ver="1">
+                        <label class="narrow-control label-top-left">Status do pedido:</label>
+                        <select class="wide-control form-control default" name="txtStatusPedido" id="txtStatusPedido">
+                            <option>Aberto</option>
+                            <option>Fechado</option>
+                        </select>
+                    </div>
+                    <div class="table-thing widget uib_w_57 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtDataHoraPedido">Data/hora:</label>
+                        <input class="wide-control form-control default" type="datetime-local" name="txtDataHoraPedido" id="txtDataHoraPedido" placeholder="Digite a data e hora do pedido">
+                    </div>
+                    <div class="btn-group uib-bs-flex widget uib_w_58 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                        <button class="btn widget uib_w_59 btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnIncluirPedido"><i class="glyphicon glyphicon-download-alt button-icon-left" data-position="left"></i>Incluir</button>
+                        <button class="btn widget uib_w_60 btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAlterarPedido"><i class="glyphicon glyphicon-sort-by-attributes-alt button-icon-left" data-position="left"></i>Alterar</button>
+                        <button class="btn widget uib_w_61 btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnExcluirPedido"><i class="glyphicon glyphicon-arrow-down button-icon-left" data-position="left"></i>Excluir</button>
+                    </div>
+                </div>
+
+                <div id="frmCaixa" class="upage-content vertical-col left hidden">
+
+                    <form class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_4 col-0_3-12_3-3" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_82 d-margins text-center" data-uib="media/img" data-ver="0">
+                                    <figure class="">
+                                        <img src="images/Checkmark.png" width="40px" height="40px">
+
+                                        <figcaption data-position="bottom"></figcaption>
+                                    </figure>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_5 col-0_6-12_6-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col left">
+                                <div class="tarea widget uib_w_83 d-margins" data-uib="media/text" data-ver="0" name="uib_w_83">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><span class="marker"><strong>A sua loja de ferramentas!</strong></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_6 col-0_3-12_3-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="btn widget uib_w_77 d-margins btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAtivarSide"><i class="glyphicon glyphicon-list" data-position="icon only"></i>
+                                </button><span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </form>
+
+                    <div class="tarea widget uib_w_62 d-margins" data-uib="media/text" data-ver="0" name="uib_w_62">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container text-center">
+                            <h3><strong>CONTROLE DE CAIXA</strong></h3>
+                        </div>
+                    </div>
+                    <div class="table-thing widget uib_w_63 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtDataHoraCaixa">Data:</label>
+                        <input class="wide-control form-control default" type="datetime-local" placeholder="Digite a data atual" id="txtDataHoraCaixa">
+                    </div>
+                    <div class="table-thing widget uib_w_64 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtNomeFuncionarioCaixa">Nome funcionário:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Selecione o funcionário" id="txtNomeFuncionarioCaixa">
+                    </div>
+                    <div class="table-thing widget uib_w_65 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtIdPedidoCaixa">Código do pedido:</label>
+                        <input class="wide-control form-control default" type="number" placeholder="Digite o número do pedido" id="txtIdPedidoCaixa">
+                    </div>
+                    <div class="table-thing widget uib_w_66 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtNomeUsuarioCaixa">Usuário pedido:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Placeholder" id="txtNomeUsuarioCaixa">
+                    </div>
+                    <button class="btn widget uib_w_67 d-margins btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnFecharCaixa"><i class="glyphicon glyphicon-ok button-icon-left" data-position="left"></i>Fechar Caixa</button>
+                </div>
+
+                <div id="frmCarrinho" class="upage-content vertical-col left hidden">
+                    <form class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_4 col-0_2-12_2-7_2-2" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_82 d-margins text-center" data-uib="media/img" data-ver="0">
+                                    <figure class="">
+                                        <img src="images/Checkmark.png" width="40px" height="40px">
+
+                                        <figcaption data-position="bottom"></figcaption>
+                                    </figure>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_5 col-0_5-12_5-7_5-5" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col left">
+                                <div class="tarea widget uib_w_83 d-margins" data-uib="media/text" data-ver="0" name="uib_w_83">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><span class="marker"><strong>A sua loja de ferramentas!</strong></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_6 col-0_2-12_2-5_2-5" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_8 col-0_3-12_3-5_3-5" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="btn widget uib_w_77 d-margins btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAtivarSide"><i class="glyphicon glyphicon-list" data-position="icon only"></i>
+                                </button><span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </form>
+                    <div class="grid grid-pad urow uib_row_11 row-height-11" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_15 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="panel widget uib_w_110 d-margins panel-warning" data-uib="twitter%20bootstrap/panel" data-ver="1">
+                                    <div class="panel-heading">
+                                        <div class="widget-container">
+                                            <div class="tarea widget uib_w_62 d-margins" data-uib="media/text" data-ver="0" name="uib_w_62">
+                                                <div class="widget-container left-receptacle"></div>
+                                                <div class="widget-container right-receptacle">
+
+                                                </div>
+                                                <div class="text-container text-center">
+                                                    <h3><strong>PRODUTOS ADICIONADOS AO CARRINHO</strong></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col uib_col_14 single-col" data-uib="layout/col" data-ver="0">
+                                        <div class="widget-container content-area vertical-col">
+                                            <span class="uib_shim"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <div class="widget-container">
+                                            <div class="tarea widget uib_w_111 d-margins" data-uib="media/text" data-ver="0" name="uib_w_111" id="txtCodigoPedidoCar">
+                                                <div class="widget-container left-receptacle">
+                                                </div>
+                                                <div class="widget-container right-receptacle"></div>
+                                                <div class="text-container">
+                                                    <p>O código do seu pedido é:</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+
+                    <div class="grid grid-pad urow uib_row_10 row-height-10 header-bg" data-uib="layout/row" data-ver="0">
+
+                        <div class="col uib_col_12 col-0_2-12_2-6" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_116 d-margins" data-uib="media/text" data-ver="0" name="uib_w_116">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><strong>Código</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_25 col-0_4-12_4-6" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_93 d-margins" data-uib="media/text" data-ver="0" name="uib_w_93" id="txtNomeProdutoCar">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><strong>Nome Produto</strong>
+                                        </p>
+                                    </div>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <div class="col uib_col_10 col-0_4-12_4-6" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_94 d-margins" data-uib="media/text" data-ver="0" name="uib_w_94" id="txtQuantidadeProdutoCar">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><strong>Quantidade Desejada</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_11 col-0_2-12_2-6" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_95 d-margins" data-uib="media/text" data-ver="0" name="uib_w_95" id="txtValorProdutoCar">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><strong>Valor</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </div>
+
+                    <div id="produtosCarrinho">
+
+                    </div>
+
+                    <div class="grid grid-pad urow uib_row_17 row-height-17" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_23 col-0_6-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_114 d-margins" data-uib="media/text" data-ver="0" name="uib_w_114">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><strong>Total de produtos comprados:</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_24 col-0_6-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_115 d-margins" data-uib="media/text" data-ver="0" name="uib_w_115">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </div>
+                    <div class="grid grid-pad urow uib_row_14 row-height-14" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_22 col-0_6-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_112 d-margins" data-uib="media/text" data-ver="0" name="uib_w_112">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><strong>Total:</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_18 col-0_6-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_113 d-margins" data-uib="media/text" data-ver="0" name="uib_w_113">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p>R$0,00</p>
+                                    </div>
+                                </div>
+
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </div>
+
+                    <button class="btn widget uib_w_117 d-margins btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnFinalizarCompra"><i class="glyphicon glyphicon-ok button-icon-left" data-position="left"></i>Finalizar Compra</button>
+                </div>
+                <div id="frmForncedores" class="upage-content vertical-col left hidden">
+
+                    <form class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_4 col-0_3-12_3-3" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_82 d-margins text-center" data-uib="media/img" data-ver="0">
+                                    <figure class="">
+                                        <img src="images/Checkmark.png" width="40px" height="40px">
+
+                                        <figcaption data-position="bottom"></figcaption>
+                                    </figure>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_5 col-0_7-12_7-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col left">
+                                <div class="tarea widget uib_w_83 d-margins" data-uib="media/text" data-ver="0" name="uib_w_83">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><span class="marker"><strong>A sua loja de ferramentas!</strong></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <div class="col uib_col_6 col-0_2-12_2-9" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="btn widget uib_w_77 d-margins btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnAtivarSide"><i class="glyphicon glyphicon-list" data-position="icon only"></i>
+                                </button><span class="uib_shim"></span>
+                            </div>
+                        </div>
+
+                        <span class="uib_shim"></span>
+                    </form>
+
+                    <div class="tarea widget uib_w_99 d-margins" data-uib="media/text" data-ver="0" name="uib_w_99">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <h3><strong>CADASTRO DE FORNECEDORES</strong></h3>
+                        <div class="text-container text-center">
+                        </div>
+                    </div>
+
+                    <div class="table-thing widget uib_w_100 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtCodigoFornecedorCad">Código fornecedor:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Digite o código do fornecedor" name="txtCodigoFornecedorCad" id="txtCodigoFornecedorCad">
+                    </div>
+                    <div class="table-thing widget uib_w_98 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtCnpjCad">CNPJ:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Digite o CNPJ do fornecedor" name="txtCnpjCad" id="txtCnpjCad">
+                    </div>
+                    <div class="table-thing widget uib_w_101 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                        <label class="narrow-control label-top-left" for="txtNomeFornecedorCad">Nome empresa:</label>
+                        <input class="wide-control form-control default" type="text" placeholder="Digite o nome do fornecedor" name="txtNomeFornecedorCad" id="txtNomeFornecedorCad">
+                    </div>
+                    <div class="btn-group uib-bs-flex widget uib_w_102 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                        <button class="btn widget uib_w_103 btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCadastrarFornecedor"><i class="glyphicon glyphicon-ok button-icon-left" data-position="left"></i>Cadastrar</button>
+                        <button class="btn widget uib_w_104 btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnLimparFornecedor"><i class="glyphicon glyphicon-trash button-icon-left" data-position="left"></i>Limpar</button>
+                        <button class="btn widget uib_w_105 btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnExcluirFornecedor"><i class="glyphicon glyphicon-arrow-down button-icon-left" data-position="left"></i>Excluir</button>
+                    </div>
+                </div>
+                <div id="frmFinalizarPedido" class="upage-content vertical-col left hidden">
+                    <div class="tarea widget uib_w_109 d-margins" data-uib="media/text" data-ver="0" name="uib_w_109">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h2><strong>PARABÉNS&nbsp;</strong></h2>
+
+                            <p><strong>Sua compra foi concluída!</strong>
+                            </p>
+
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    <button class="btn widget uib_w_118 d-margins btn-warning" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnVoltarCompraConcluida"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Voltar</button>
+                </div>
+            </div>
+        </div>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+    </body>
+
+</html>

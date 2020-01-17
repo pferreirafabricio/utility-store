@@ -1,0 +1,2 @@
+(function(){var c=function(a){if(!a.length)return 0;a=a.map(function(a,b){return $(b).height()});"[object Array]"===toString.call(a[0])&&(a=a[0]);return Math.max.apply(null,a)},b=function(){$(".upage-outer").each(function(){var a=$(this),b=a.children(".uib-header-fixed"),a=a.children(".upage-content");window.jQuery&&window.jQuery(".uib_crossbar.topbar").filter(":animated, .uib_bar_visible").length||a.css({top:c(b)})})};$(function(){b();$(window).on("resize",b);$(document).on("recalc-marginal-offset",
+b)})})();

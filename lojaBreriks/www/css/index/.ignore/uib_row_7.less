@@ -1,0 +1,17 @@
+@gutter_r1: 10px;
+
+.uib_row_7 > .col { padding-left:(@gutter_r1 / 2); padding-right:(@gutter_r1 / 2); }
+
+@media all and (min-width: @wp_1) {
+  .uib_col_2     { width:84%;}
+  .urow.cright       > .uib_col_2     { padding-left: 0px !important;}
+  .urow:not(.cright) > .uib_col_2     { clear:left; padding-left: 0px !important; }
+  .uib_col_3     { width:16%;}
+  .urow:not(.cright) > .uib_col_3     { padding-right:0px !important;}
+  .urow.cright       > .uib_col_3     { clear:right; padding-right:0px !important; }
+}
+
+@media all and (max-width: @wp_1) {
+  .col-0_10-12     { width: auto; float: none !important;  clear:both; padding-left:0px !important; padding-right:0px !important; }
+  .col-0_2-12     { width: auto; float: none !important;  clear:both; padding-left:0px !important; padding-right:0px !important; }
+}

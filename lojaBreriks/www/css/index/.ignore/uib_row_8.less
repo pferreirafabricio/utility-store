@@ -1,0 +1,47 @@
+@gutter_r1: 0px;
+
+.uib_row_8 > .col { padding-left:(@gutter_r1 / 2); padding-right:(@gutter_r1 / 2); }
+
+@media all and (min-width: @wp_1) {
+  .uib_col_4     { width:17%;}
+  .urow.cright       > .uib_col_4     { padding-left: 0px !important;}
+  .urow:not(.cright) > .uib_col_4     { clear:left; padding-left: 0px !important; }
+  .uib_col_5     { width:42%;}
+  .uib_col_6     { width:16%;}
+  .uib_col_8     { width:25%;}
+  .urow:not(.cright) > .uib_col_8     { padding-right:0px !important;}
+  .urow.cright       > .uib_col_8     { clear:right; padding-right:0px !important; }
+}
+
+@media all and (min-width: @wp_2) and (max-width: @wp_1){
+  .uib_col_4     { width:28%;}
+  .urow.cright       > .uib_col_4     { padding-left: 0px !important;}
+  .urow:not(.cright) > .uib_col_4     { clear:left; padding-left: 0px !important; }
+  .uib_col_5     { width:71%;}
+  .urow:not(.cright) > .uib_col_5     { padding-right:0px !important;}
+  .urow.cright       > .uib_col_5     { clear:right; padding-right:0px !important; }
+  .uib_col_6     { width:40%;}
+  .urow.cright       > .uib_col_6     { padding-left: 0px !important;}
+  .urow:not(.cright) > .uib_col_6     { clear:left; padding-left: 0px !important; }
+  .uib_col_8     { width:60%;}
+  .urow:not(.cright) > .uib_col_8     { padding-right:0px !important;}
+  .urow.cright       > .uib_col_8     { clear:right; padding-right:0px !important; }
+}
+
+@media all and (min-width: @wp_3) and (max-width: @wp_2){
+  .uib_col_4.uib_col_4     { width: auto; float: none !important;  clear:both; padding-left:0px !important; padding-right:0px !important; }
+  .uib_col_5.uib_col_5     { width: auto; float: none !important;  clear:both; padding-left:0px !important; padding-right:0px !important; }
+  .uib_col_6     { width:40%;}
+  .urow.cright       > .uib_col_6     { padding-left: 0px !important;}
+  .urow:not(.cright) > .uib_col_6     { clear:left; padding-left: 0px !important; }
+  .uib_col_8     { width:60%;}
+  .urow:not(.cright) > .uib_col_8     { padding-right:0px !important;}
+  .urow.cright       > .uib_col_8     { clear:right; padding-right:0px !important; }
+}
+
+@media all and (max-width: @wp_3) {
+  .col-0_2-12_2-7_2-2     { width: auto; float: none !important;  clear:both; padding-left:0px !important; padding-right:0px !important; }
+  .col-0_5-12_5-7_5-5     { width: auto; float: none !important;  clear:both; padding-left:0px !important; padding-right:0px !important; }
+  .col-0_2-12_2-5_2-5     { width: auto; float: none !important;  clear:both; padding-left:0px !important; padding-right:0px !important; }
+  .col-0_3-12_3-5_3-5     { width: auto; float: none !important;  clear:both; padding-left:0px !important; padding-right:0px !important; }
+}
