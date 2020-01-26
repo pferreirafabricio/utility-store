@@ -1,6 +1,4 @@
-# Mobile Technologies - Loja Breriks
-
-# Semana OmniStack 10ª edição :rocket:
+# Loja Breriks - Materiais de construção
 
 ## :eyes: Como ficou?
 <!-- 
@@ -8,7 +6,7 @@
 <img src="/projectImages/tela-mobile.png" width="auto" height="400px"></img>
 <img src="/projectImages/tela-github.png" width="auto" height="400px"></img> -->
 
-## :rocket: Tecnologias usadas
+## :man_technologist: Tecnologias usadas
 
 O projeto foi desenvolvido com as seguintes tecnologias:
 - [Intel XDK](https://software.intel.com/en-us/articles/intel-xdk)
