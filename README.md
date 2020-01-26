@@ -4,10 +4,10 @@
 
 Algumas screenshots do resultado final:
 
-<img src="/projectImages/tela-login.png" width="auto" height="400px"></img>
-<img src="/projectImages/tela-compras.png" width="auto" height="400px"></img>
-<img src="/projectImages/tela-carrinho.png" width="auto" height="400px"></img>
-<img src="/projectImages/tela-painel.png" width="auto" height="400px"></img>
+<img src="/projectImages/tela-login.png" width="auto" height="370px"></img>
+<img src="/projectImages/tela-compras.png" width="auto" height="370px"></img>
+<img src="/projectImages/tela-carrinho.png" width="auto" height="370px"></img>
+<img src="/projectImages/tela-painel.png" width="auto" height="370px"></img>
 
 ## :man_technologist: Tecnologias usadas
 
