@@ -26,6 +26,3 @@ O projeto foi desenvolvido durante o 4º bimestre do 3º ano do [Ensino Técnico
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-
-
-<!-- Project developed with a hybrid platform called Intel XDK, aiming to develop mobile applications for Android and IOS using HTML, CSS, JS (Jquery and JSON) and PHP. -->
